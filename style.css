@@ -1,0 +1,31 @@
+#pAir, #pWater, #pLand{
+    display: none;
+} 
+body{
+    background-image: url('images/wall.jpg');
+    background-attachment: fixed;
+ 
+}
+#pAirBudget{
+    text-align: center;
+    height:  20px;
+    width: 900px;
+}
+#pMale , #pFemale, #pOther{
+    display: none;
+}
+main{
+    background-color: white;
+    margin: 250px;  
+    margin-top: 50px;
+    padding: 20px;
+}
+header{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(177, 177, 135);
+    font-size: 72px;        
+    font-style: oblique;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=".\node_modules\bootstrap\dist\css\bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        PRO VEHICLE SELECTOR 
+    </header>
+    
+    <main>
+        <p>Please select appropriate VEHICLE Medium</p>
+        <div class="row">
+            <div class="col-md-4">
+                <input type="radio" id="cAir" name="medium" value="air"><label for="air">Air</label><br></div>
+            <div class="col-md-4">
+                <input type="radio" id="cWater" name="medium" value="water"> <label for="water">Water</label><br></div>
+            <div class="col-md-4">
+                <input type="radio" id="cLand" name="medium" value="land"><label for="land">Land </label></div>
+        </div>
+        <button class="btn btn-danger" onclick="checkMed()">submit</button>
+
+        <div class="container-fluid">
+        <div id="pAir">
+                <p class="pGraph">So you want to fly like a bird? Well, in this case, we've got tons of options ready
+                    for you to pick from.
+                    Flying to a new location is something really beautiful and special, but there is a problem with
+                    that. You
+                    have to have a flying license to be able to go anywhere, as well as the fact that you have to have
+                    really
+                    deep pockets.
+                </p>
+                <p>Would you rather have:
+                    <select name="aircraftType" id="aircraftType" >
+                        <option value="Airplane">Airplane</option>
+                        <option value="Helicopter">Helicopter</option>
+                        <option value="both">Give me both options</option>
+                    </select>
+                   
+                </p>
+                <p>What is your max budget?</p>
+                <input type="range" name="budget" id="pAirBudget" min="100000" max="5000000">
+                <span id="money">monetary value</span>
+
+                <button onclick="checkType()">update</button>
+                <p>
+                    Your best option would be:
+                </p>
+                <div id="planes">
+                    <div id="plane1">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Plane 1</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plane2">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Plane 2</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plane3">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Plane 3</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plane4">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Plane 4</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plane5">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Plane 5</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plane6">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Plane 6</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="choppers">
+                    heli
+                    <div id="heli1">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Heli 1</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="heli2">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Heli 2</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="heli3">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Heli 3</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="heli4">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Heli 4</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="heli5">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Heli 5</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="heli6">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/cesnaV.jpg" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h1>Heli 6</h1><br><br>
+                                <h2>Description</h2><br>
+                                The Citation V has a fine blend of cabin comfort, performance, and reliability. It is a
+                                good
+                                choice for short trips.
+                                The deciding factor for most clients when comparing the Citation V to other similar jets
+                                is
+                                often the comfort of the cabin. The Citation V’s cabin is 17.4 feet long, 4.8 feet wide
+                                and
+                                4.8 feet high. Compare these numbers to the Hawker 400XP’s cabin dimensions of 15.6 x
+                                4.8 x
+                                4.9 feet, or the Citation Bravo’s dimensions of 15.8 x 4.7 x 4.8 feet – the difference
+                                in
+                                length is significant. The engineers of the Citation V took advantage of the extra cabin
+                                space and installed extra-wide seats that recline 60 degrees and rotate a full 360
+                                degrees.
+                                The cabin pressurization system can hold a sea level cabin to 23,580 feet, which is
+                                useful
+                                when flying at a high speed (425 knots/hour) cruise at 37,000 feet, or at a long range
+                                (350
+                                knots/hour) cruise at the Citation V’s maximum certified flight ceiling of 45,000 feet.
+                                Takeoff distances are fairly short. At sea level, the Citation V can take off in 3,160
+                                feet.
+                                At an altitude of 5,000 feet and a temperature of 77°F, the required runway distance
+                                increases to 4,780 feet.
+                                Pilots aren’t the only ones that can appreciate the performance capabilities of the
+                                Citation
+                                V. Its average cruise speed of 415 knots per hour makes it a popular choice for 350 to
+                                400
+                                mile trips. Typical nonstop flights include Fort Lauderdale to New York, Aspen to Los
+                                Angeles, and San Francisco to Southern California.
+                                The Citation V is known as a pilot-friendly jet, which also means an exceptionally safe
+                                one.
+                                Its pre-flight check is easy to carry out, with its organization designed with the
+                                pilots in
+                                mind. The jet handles well, especially in normal maneuvers and the landing approach
+                                configuration. The cockpit visibility of 340 degrees is unmatched by any other light
+                                private
+                                jets in its class, and managers and mechanics alike have repeatedly praised its
+                                reliability.
+                                In short, the Citation V virtues are comfort, performance, and reliability. It comes as
+                                no
+                                surprise that it is consistently chosen over other private jets in its class.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div id="pWater">
+            <p class="pGraph"> You love the sea right? Well, you've come to the right place. From very cheap $500
+                kayaks, all the way
+                to top of the line yachts that you can easily live in. The problem with the latter is that you need
+                a very large dock to keep it
+                in as well as the fact that you need to keep it maintained, but i think that if you can afford one,
+                both wont be a issue.<br>
+                Select your favorite category (or more than one):
+            </p>
+            <form id= "formType">
+            <input type="radio" name="boatType" id="sailBoat" onchange="buyBoat()">
+            <label for="sailBoat">Sail Boat</label>
+
+            <input type="radio" name="boatType" id="cruiseBoat" onchange="buyBoat()">
+            <label for="cruiseBoat">Cruise Boat</label>
+
+            <input type="radio" name="boatType" id="motorBoat" onchange="buyBoat()">
+            <label for="motorBoat">Motor Boat</label>
+
+            <input type="radio" name="boatType" id="speedBoat" onchange="buyBoat()">
+            <label for="speedBoat">Speed Boat</label>
+
+            <input type="radio" name="boatType" id="yachtBoat" onchange="buyBoat()">
+            <label for="yachtBoat">Yacht Boat</label> 
+        </form>
+            <p>Enter the name you would like to be displayed on the boat</p>
+            <input type="text" id= "boatName"><br>
+            <form action="" id="formFeatures"></form>
+            Select the needed features of your boat:
+            <input id="f0" type="checkbox" class="boatFeatures" value = "Ice Chiller"> Ice Chiller <br>
+            <input id="f1" type="checkbox" class="boatFeatures" value = "Stove"> Stove
+            <input id="f2" type="checkbox" class="boatFeatures" value = "Extra life vests"> Extra life vests<br>
+            <input id="f3" type="checkbox" class="boatFeatures" value = "Fishing equipment"> Fishing equipment
+            <input id="f4" type="checkbox" class="boatFeatures" value = "2 extra lifebuoys"> 2 extra lifebuoys<br>
+            <input id="f5" type="checkbox" class="boatFeatures" value = "Navigation System"> Navigation System
+            <input id="f6" type="checkbox" class="boatFeatures" value = "First-Aid kit"> First-Aid kit<br>
+            <input id="f7" type="checkbox" class="boatFeatures" value = "Mini BAR"> Mini BAR
+            <input id="f8" type="checkbox" class="boatFeatures" value = "Survival kit"> Small survival kit<br>
+
+            <p>Pick the color of the boat</p>
+            <select name="color" id="ColorSelect">
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="Purple">Purple</option>
+                <option value="Orange">Orange</option>
+                <option value="Yellow">Yellow</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+            </select>
+
+
+
+            <button onclick="buyBoat()">Accept</button>
+
+        </div>  
+        <div id="pLand">
+            <p class="pGraph">Don't fret, there's nothing wrong with the basic option, because sometimes, the most
+                basic option is the best one. Or maybe you've already got a boat and a plane but you want to change
+                your daily driver. That being said, we've got tons of options here for you as well, from the basic
+                square on wheels,to the ready built racecar
+                all the way to the luxury boat on wheels.
+            </p>
+            <form id="form3">
+                <p>Gender:</p>
+                        <input type="radio" id="male" name="gender" value="male" onchange="genderCheck()" >
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female" onchange="genderCheck()">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other" onchange="genderCheck()">
+                        <label for="other">Other</label><br>
+                <p id="pMale">
+                    if you're a man, what brand would you like?
+                    what do you  consider the best car brand?<br>
+                    <form id="f5">    
+                    <select name="carBrand" id="carBrand">
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Bmw">BMW</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Audi">Audi</option>
+                            <option value="VolksWagen">VolksWagen</option>
+                            <option value="Toyota">Toyota</option>
+                        </select> <br>
+                        <label for="priceBox">Please enter the max amount you are willing to pay.</label>
+                        <input type="text" id= "priceBox">
+                        <button type="button" onclick="manCar()">Submit</button><br>
+                        
+                    </form>
+                    
+                </p>
+                <p id="pFemale">
+                    if you're a woman, you dont know how to drive, so this is the perfect car for you.<br>
+                    <img src="images/bump.jpg" alt="">
+                </p>
+                <p id="pOther">
+                        if you're neither, what are you? some sort of weird alien thing? here use this. <br>
+                        <img src="images/alien.jpg" alt=""><br>
+                        go probe a cow's butt or something.<br>
+
+                    </p>
+            </form>
+        </div>
+        </div>
+        </div>
+    </div>  
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
